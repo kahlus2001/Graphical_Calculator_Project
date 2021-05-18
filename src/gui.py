@@ -19,9 +19,24 @@ class GUI(QtWidgets.QMainWindow):
         main.setLayout(layout)
         self.setCentralWidget(main)
 
-        self.canvas = QtWidgets.QLabel()
-        self.canvas.setPixmap(QtGui.QPixmap(600, 600))
-        layout.addWidget(self.canvas)
+        names = ['C', 'AC', 'log', 'graph', '',
+                 '7', '8', '9', '/', 'sqrt',
+                 '4', '5', '6', '*', '%',
+                 '1', '2', '3', '-', '',
+                 '0', '.', '+/-', '+', '=']
+
+        positions = [(i, j) for i in range(5) for j in range(5)]
+
+        for position, name in zip(positions, names):
+
+            if name == '':
+                continue
+            button = QtWidgets.QPushButton(name)
+            layout.addWidget(button, *position)
+
+        self.move(300, 150)
+        self.setWindowTitle('Graphical Calculator')
+        self.show()
 
 
 

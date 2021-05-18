@@ -2,91 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="generated documentation.">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/.buildinfo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/.doctrees/environment.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/.doctrees/index.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_sources/index.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/badge_only.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/Roboto-Slab-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/Roboto-Slab-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/Roboto-Slab-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/Roboto-Slab-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-bold-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-bold-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-normal-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-normal-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-normal.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/fonts/lato-normal.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/doctools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/documentation_options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Inconsolata-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Inconsolata-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Inconsolata.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bolditalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bolditalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bolditalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-bolditalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/Lato/lato-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/RobotoSlab/roboto-slab-v7-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/jquery-3.5.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/js/badge_only.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/js/html5shiv-printshiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/js/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/language_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/pygments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/searchtools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/underscore-1.12.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/_static/underscore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/genindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/objects.inv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/searchindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/pytest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/20183240-20200873-ha-2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/20183240-20200873-ha-2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +36,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -132,13 +51,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate HTML docs with sphinx " type="docs" factoryName="Sphinx task">
+    <configuration name="generate HTML docs with sphinx" type="docs" factoryName="Sphinx task">
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -153,9 +72,9 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -172,9 +91,9 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -187,7 +106,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.run main app" />
-      <item itemvalue="Python docs.generate HTML docs with sphinx " />
+      <item itemvalue="Python docs.generate HTML docs with sphinx" />
       <item itemvalue="Python tests.run doctest examples in src" />
       <item itemvalue="Python tests.run pytest test cases in tests" />
     </list>
@@ -202,6 +121,7 @@
       <updated>1621340432412</updated>
       <workItem from="1621340434921" duration="777000" />
       <workItem from="1621341298515" duration="6581000" />
+      <workItem from="1621350728262" duration="774000" />
     </task>
     <task id="LOCAL-00001" summary="completed configuration">
       <created>1621346690521</created>
@@ -254,6 +174,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commited unmarked files" />
@@ -263,9 +184,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="generated documentation." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1621348732914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_doctest_examples_in_src.coverage" NAME="run doctest examples in src Coverage Results" MODIFIED="1621350185944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1621350194132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1621351321332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1621350177846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1621350194132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
