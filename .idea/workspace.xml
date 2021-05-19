@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="generated documentation.">
+    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="added docs/build and tests">
       <change beforePath="$PROJECT_DIR$/.idea/20183240-20200873-ha-2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/20183240-20200873-ha-2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/math.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../20183240-20200873-ha-1/tests/test_cases.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.run pytest test cases in tests">
+  <component name="RunManager" selected="Python.run main app">
     <configuration name="run main app" type="PythonConfigurationType" factoryName="Python">
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -36,9 +37,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -51,13 +52,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate HTML docs with sphinx" type="docs" factoryName="Sphinx task">
+    <configuration name="generate HTML docs with sphinx " type="docs" factoryName="Sphinx task">
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -72,9 +73,9 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -91,9 +92,9 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -106,7 +107,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.run main app" />
-      <item itemvalue="Python docs.generate HTML docs with sphinx" />
+      <item itemvalue="Python docs.generate HTML docs with sphinx " />
       <item itemvalue="Python tests.run doctest examples in src" />
       <item itemvalue="Python tests.run pytest test cases in tests" />
     </list>
@@ -121,7 +122,7 @@
       <updated>1621340432412</updated>
       <workItem from="1621340434921" duration="777000" />
       <workItem from="1621341298515" duration="6581000" />
-      <workItem from="1621350728262" duration="774000" />
+      <workItem from="1621449860450" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="completed configuration">
       <created>1621346690521</created>
@@ -185,8 +186,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_doctest_examples_in_src.coverage" NAME="run doctest examples in src Coverage Results" MODIFIED="1621350185944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1621351321332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1621350177846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1621451096225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1621350194132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1621350177846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
