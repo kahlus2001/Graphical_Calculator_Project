@@ -1,4 +1,6 @@
 import math
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def add(input_1: float, input_2: float) -> float:
@@ -16,6 +18,7 @@ def add(input_1: float, input_2: float) -> float:
     result = input_1 + input_2
     return result
 
+
 def subtract(input_1: float, input_2: float) -> float :
     """Subtract two inputs got from the user.
 
@@ -31,6 +34,7 @@ def subtract(input_1: float, input_2: float) -> float :
     result = input_1 - input_2
     return result
 
+
 def multiply(input_1: float, input_2: float) -> float:
     """Multiple two inputs got from the user.
 
@@ -45,6 +49,7 @@ def multiply(input_1: float, input_2: float) -> float:
 
     result = input_1 * input_2
     return result
+
 
 def divide(input_1: float, input_2: float):
     """Divides first input from user by second input from user.
@@ -64,6 +69,7 @@ def divide(input_1: float, input_2: float):
         result = input_1 / input_2
         return result
 
+
 def modulo(input_1: float, input_2: float) -> float:
     """Perform integer division of first user input by second user input.
 
@@ -78,3 +84,27 @@ def modulo(input_1: float, input_2: float) -> float:
 
     result = input_1 % input_2
     return result
+
+
+def plot(formula: str, x_range):
+    """Plots a graph using user input function.
+
+    """
+    # for now, the function only works if the input is in python: it will not plot 'sin(x)' or 'e^x'.
+    # It should however return an error message.
+
+    i = True
+    while i:
+        try:
+            x = np.array(x_range)
+            y = eval(formula)
+            plt.plot(x, y)
+            plt.title(f"graph of y={formula}")
+            plt.show()
+            i = False
+        except:
+            return 'Cannot plot function. Invalid input. Please try again.'
+            # now we need the user to input function once again
+            i = False
+
+
