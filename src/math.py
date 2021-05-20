@@ -1,3 +1,5 @@
+from typing import Any
+
 import math
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,7 +21,7 @@ def add(input_1: float, input_2: float) -> float:
     return result
 
 
-def subtract(input_1: float, input_2: float) -> float :
+def subtract(input_1: float, input_2: float) -> float:
     """Subtract two inputs got from the user.
 
     :examples:
@@ -86,12 +88,28 @@ def modulo(input_1: float, input_2: float) -> float:
     return result
 
 
+def evaluate(expression: str) -> Any:
+    """Evaluate mathematical expression provided by user.
+    >>> evaluate('2*3')
+    6
+    >>> evaluate('3/3')
+    1.0
+    >>>evaluate('1/0')
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ZeroDivisionError: division by zero
+    """
+    try:
+        return eval(expression)
+    except:
+        print("invalid input")
+
+
 def plot(formula: str, x_range):
-    """Plots a graph using user input function.
+    """Plot a graph using user input function.
 
     """
     # for now, the function only works if the input is in python: it will not plot 'sin(x)' or 'e^x'.
-    # It should however return an error message.
 
     i = True
     while i:
