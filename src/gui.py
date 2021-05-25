@@ -7,11 +7,11 @@ Copyright (c) 2021 - Eindhoven University of Technology, The Netherlands
 This software is made available under the terms of the MIT License.
 """
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtGui import QColor, QFont
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLineEdit, QLabel
+from PyQt5.QtGui import  QFont
+
 from math_functions import *
-import sys
+
+from PyQt5 import QtCore
 
 import random
 
@@ -36,7 +36,7 @@ class GraphWindow(QtWidgets.QWidget):
 
 
 class GUI(QtWidgets.QMainWindow):
-    """A class where we make our Graphical User Interface based on PyQT
+    """A class where we make our Graphical User Interface based on PyQt
     """
 
     def __init__(self) -> None:
@@ -105,6 +105,7 @@ class GUI(QtWidgets.QMainWindow):
         layout.addWidget(self.display, 1, 0, 1, 5)
         self.display.setFont(QFont('Arial', 20))
         self.display.setStyleSheet("QLabel { background-color : black; color : white; }")
+        self.display.setAlignment(QtCore.Qt.AlignRight)
 
         #position window on screen, set title, show window.
         self.move(300, 150)
