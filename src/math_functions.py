@@ -13,7 +13,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-def evaluate(expression: str) -> Any:
+def evaluate(expression: str, result: str) -> Any:
     """Evaluate mathematical expression provided by user.
     >>> evaluate('2*3')
     6
@@ -26,8 +26,9 @@ def evaluate(expression: str) -> Any:
         print(expression, '=', eval(expression))
         return eval(expression)
     except:
-        print('invalid input')
-        return "invalid input"
+        result = 'Invalid Input'
+        print(result)
+        return result
 
 
 def plot(formula: str, x_range):
