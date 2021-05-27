@@ -79,7 +79,7 @@ class QuadraticWindow(QtWidgets.QWidget):
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
 
-        self.roots_label = QtWidgets.QLabel("Find roots of second degree polynomial:", self)
+        self.roots_label = QtWidgets.QLabel("Solve quadratic equation in the form 0=a*x^2+b*x+c:", self)
         layout.addWidget(self.roots_label)
         self.roots_label.setGeometry(5, 10, 400, 30)
         self.roots_label.setFont(QFont('Arial', 10))
@@ -107,12 +107,12 @@ class QuadraticWindow(QtWidgets.QWidget):
         self.c.setGeometry(285, 50, 50, 20)
 
         # confirm button
-        solve_button = QtWidgets.QPushButton('Calculate Roots', self)
+        solve_button = QtWidgets.QPushButton('Solve equation', self)
         layout.addWidget(solve_button)
         solve_button.clicked.connect(self.solve)
         solve_button.setGeometry(160, 80, 90, 25)
 
-        self.setWindowTitle('Find Quadratic Zeroes')
+        self.setWindowTitle('Solve Quadratic Equation')
 
     def solve(self) -> None:
         """Call find_roots function."""
@@ -120,7 +120,7 @@ class QuadraticWindow(QtWidgets.QWidget):
             roots = find_roots(float(self.a.text()), float(self.b.text()), float(self.c.text()))
             self.roots_label.setText(roots)
         except Exception:
-            self.roots_label.setText(' Invalid input. Cannot calculate roots. Try again.')
+            self.roots_label.setText(' Invalid input. Cannot solve. Try again.')
 
 
 class GUI(QtWidgets.QMainWindow):
