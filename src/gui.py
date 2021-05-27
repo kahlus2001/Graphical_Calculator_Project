@@ -7,7 +7,8 @@ Copyright (c) 2021 - Eindhoven University of Technology, The Netherlands
 This software is made available under the terms of the MIT License.
 """
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtGui import  QFont
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QLineEdit
 
 from math_functions import *
 
@@ -15,24 +16,45 @@ from PyQt5 import QtCore
 
 import random
 
-#define globals
+# define globals
 expression = ""
 result = ""
 check = False
 
-class GraphWindow(QtWidgets.QWidget):
+
+class GraphInputWindow(QtWidgets.QWidget):
     """
     This "window" is a QWidget. If it has no parent, it
     will appear as a free-floating window as we want.
     """
 
     def __init__(self):
+        """Initializer of the GraphWindow class.
+        """
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
         self.label = QtWidgets.QLabel("Centre Window")
         self.label.setPixmap(QtGui.QPixmap(600, 600))
         layout.addWidget(self.label)
 
+        self.input_function = QLineEdit("Input function", self)
+        layout.addWidget(self.input_function)
+        self.input_lower = QLineEdit("Input lower bound", self)
+        layout.addWidget(self.input_lower)
+        self.input_upper = QLineEdit("Input upper bound", self)
+        layout.addWidget(self.input_upper)
+        self.input_function.setGeometry(0, 80, 250, 40)
+        self.input_lower.setGeometry(0, 120, 125, 40)
+        self.input_upper.setGeometry(125, 120, 125, 40)
+
+        confirm_button = QtWidgets.QPushButton('Confirm', self)
+        layout.addWidget(confirm_button)
+        confirm_button.clicked.connect(self.draw_graph)
+        confirm_button.setGeometry(65, 200, 120, 60)
+
+    def draw_graph(self) -> None:
+        """Draw graph from user input."""
+        plot(self.input_function.text(), int(self.input_lower.text()), int(self.input_upper.text()))
 
 
 class GUI(QtWidgets.QMainWindow):
@@ -48,7 +70,7 @@ class GUI(QtWidgets.QMainWindow):
         main.setLayout(layout)
         self.setCentralWidget(main)
 
-        #create buttons
+        # create buttons
         names = ['C', 'AC', '(', ')', 'graph',
                  '7', '8', '9', '/', 'sqrt',
                  '4', '5', '6', '*', 'mod',
@@ -68,34 +90,16 @@ class GUI(QtWidgets.QMainWindow):
             layout.addWidget(button[count], *position)
             count += 1
 
-        #assign buttons
-        button[0].clicked.connect(self.undo)
-        button[1].clicked.connect(self.clear_all)
-        button[2].clicked.connect(self.left_bracket)
-        button[3].clicked.connect(self.right_bracket)
-        button[4].clicked.connect(self.graph)
-        button[5].clicked.connect(self.add7)
-        button[6].clicked.connect(self.add8)
-        button[7].clicked.connect(self.add9)
-        button[8].clicked.connect(self.add_divide)
-        button[9].clicked.connect(self.add_sqrt)
-        button[10].clicked.connect(self.add4)
-        button[11].clicked.connect(self.add5)
-        button[12].clicked.connect(self.add6)
-        button[13].clicked.connect(self.add_multiply)
-        button[14].clicked.connect(self.add_modulo)
-        button[15].clicked.connect(self.add1)
-        button[16].clicked.connect(self.add2)
-        button[17].clicked.connect(self.add3)
-        button[18].clicked.connect(self.add_minus)
-        button[19].clicked.connect(self.add_power)
-        button[20].clicked.connect(self.add0)
-        button[21].clicked.connect(self.add_dot)
-        button[22].clicked.connect(self.change_sign)
-        button[23].clicked.connect(self.add_plus)
-        button[24].clicked.connect(self.equals)
+        # assign buttons
+        functions = [self.undo, self.clear_all, self.left_bracket, self.right_bracket, self.graph, self.add7, self.add8,
+                     self.add9, self.add_divide, self.add_sqrt, self.add4, self.add5, self.add6, self.add_multiply,
+                     self.add_modulo, self.add1, self.add2, self.add3, self.add_minus, self.add_power, self.add0,
+                     self.add_dot, self.change_sign, self.add_plus, self.equals]
 
-        #create displays as label
+        for index, function in enumerate(functions):
+            button[index].clicked.connect(function)
+
+        # create displays as label
         self.previous = QtWidgets.QLabel('', self)
         layout.addWidget(self.previous, 0, 0, 1, 5)
         self.previous.setFont(QFont('Arial', 20))
@@ -107,11 +111,10 @@ class GUI(QtWidgets.QMainWindow):
         self.display.setStyleSheet("QLabel { background-color : black; color : white; }")
         self.display.setAlignment(QtCore.Qt.AlignRight)
 
-        #position window on screen, set title, show window.
+        # position window on screen, set title, show window.
         self.move(300, 150)
         self.setWindowTitle('Graphical Calculator')
         self.show()
-
 
     def update(self) -> None:
         """Update display of calculator."""
@@ -125,10 +128,8 @@ class GUI(QtWidgets.QMainWindow):
             result, expression = '', ''
 
     def graph(self) -> None:
-        self.graph = GraphWindow()
+        self.graph = GraphInputWindow()
         self.graph.show()
-
-
 
     def add0(self) -> None:
         """"When button '0' is clicked, concatenate 0 to expression."""
