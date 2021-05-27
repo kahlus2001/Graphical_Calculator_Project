@@ -54,25 +54,25 @@ def find_roots(a: float, b: float, c: float) -> str:
 
     :examples:
     >>> find_roots(1, 4, 2)
-    [-3.414213562373095, -0.5857864376269049]
+    'roots: x=-3.414213562373095 and x=-0.5857864376269049'
     >>> find_roots(1, 4, 4)
-    [-2.0]
+    'double root: x=-2.0'
     >>>find_roots(2, 2, 2)
-    []
+    'no real roots'
     """
     delta = b ** 2 - 4 * a * c
     if delta > 0:
         x1 = (- b - math.sqrt(delta)) / 2 * a
         x2 = (- b + math.sqrt(delta)) / 2 * a
         roots = [x1, x2]
-        return str(f"roots: x={roots[0]} and x={roots[1]}")
+        return str(f'roots: x={roots[0]} and x={roots[1]}')
 
     if delta == 0:
         x = - b / 2 * a
         roots = [x]
-        return str(f"double root: x={roots[0]}")
+        return str(f'double root: x={roots[0]}')
     else:
-        return "no real roots"
+        return 'no real roots'
 
 
 
