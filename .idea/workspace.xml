@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="basic graph plotter finished. updated buttons">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="graph plotter upgraded.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/math_functions.py" afterDir="false" />
@@ -126,7 +125,7 @@
       <workItem from="1621500234307" duration="1014000" />
       <workItem from="1621949817305" duration="2733000" />
       <workItem from="1621957707289" duration="351000" />
-      <workItem from="1622102411658" duration="6163000" />
+      <workItem from="1622102411658" duration="8254000" />
     </task>
     <task id="LOCAL-00001" summary="completed configuration">
       <created>1621346690521</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622106394814</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="graph plotter upgraded.">
+      <created>1622108924459</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622108924459</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,11 +244,12 @@
     <MESSAGE value="added plot function" />
     <MESSAGE value="basic operations finished" />
     <MESSAGE value="basic graph plotter finished. updated buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic graph plotter finished. updated buttons" />
+    <MESSAGE value="graph plotter upgraded." />
+    <option name="LAST_COMMIT_MESSAGE" value="graph plotter upgraded." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_doctest_examples_in_src.coverage" NAME="run doctest examples in src Coverage Results" MODIFIED="1621350185944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1622108627992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1622110721551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1621350177846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1621350194132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>

@@ -33,9 +33,15 @@ class GraphInputWindow(QtWidgets.QWidget):
         """
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
+        self.status_label = QtWidgets.QLabel("Graph status", self)
+        layout.addWidget(self.status_label)
+        self.status_label.setGeometry(10, 20, 390, 40)
+        self.status_label.setFont(QFont('Arial', 10))
+        self.status_label.setStyleSheet("QLabel { background-color : white; color : black; }")
+
         self.input_label = QtWidgets.QLabel("y = ", self)
         layout.addWidget(self.input_label)
-        self.input_label.setGeometry(10, 20, 50, 40)
+        self.input_label.setGeometry(10, 70, 50, 40)
 
         self.input_function = QLineEdit("Input function, use numpy notation", self)
         layout.addWidget(self.input_function)
@@ -43,20 +49,24 @@ class GraphInputWindow(QtWidgets.QWidget):
         layout.addWidget(self.input_lower)
         self.input_upper = QLineEdit("Input upper x-bound", self)
         layout.addWidget(self.input_upper)
-        self.input_function.setGeometry(40, 20, 220, 40)
-        self.input_lower.setGeometry(10, 60, 125, 40)
-        self.input_upper.setGeometry(135, 60, 125, 40)
+        self.input_function.setGeometry(40, 70, 220, 40)
+        self.input_lower.setGeometry(10, 110, 125, 40)
+        self.input_upper.setGeometry(135, 110, 125, 40)
 
         confirm_button = QtWidgets.QPushButton('Confirm', self)
         layout.addWidget(confirm_button)
         confirm_button.clicked.connect(self.draw_graph)
-        confirm_button.setGeometry(280, 30, 120, 60)
+        confirm_button.setGeometry(280, 80, 120, 60)
 
         self.setWindowTitle('Function Plotter')
 
     def draw_graph(self) -> None:
         """Draw graph from user input."""
-        plot(self.input_function.text(), int(self.input_lower.text()), int(self.input_upper.text()))
+        try:
+            message = plot(self.input_function.text(), float(self.input_lower.text()), float(self.input_upper.text()))
+            self.status_label.setText(message)
+        except Exception:
+            self.status_label.setText('Cannot plot function. Invalid input. Please try again.')
 
 
 class GUI(QtWidgets.QMainWindow):
@@ -137,147 +147,126 @@ class GUI(QtWidgets.QMainWindow):
         """"When button '0' is clicked, concatenate 0 to expression."""
         global expression
         expression = expression + '0'
-        print(expression)
         self.update()
 
     def add1(self) -> None:
         """"When button '1' is clicked, concatenate 1 to expression."""
         global expression
         expression = expression + '1'
-        print(expression)
         self.update()
 
     def add2(self) -> None:
         """"When button '2' is clicked, concatenate 2 to expression."""
         global expression
         expression = expression + '2'
-        print(expression)
         self.update()
 
     def add3(self) -> None:
         """"When button '3' is clicked, concatenate 3 to expression."""
         global expression
         expression = expression + '3'
-        print(expression)
         self.update()
 
     def add4(self) -> None:
         """"When button '4' is clicked, concatenate 4 to expression."""
         global expression
         expression = expression + '4'
-        print(expression)
         self.update()
 
     def add5(self) -> None:
         """"When button '5' is clicked, concatenate 5 to expression."""
         global expression
         expression = expression + '5'
-        print(expression)
         self.update()
 
     def add6(self) -> None:
         """"When button '6' is clicked, concatenate 6 to expression."""
         global expression
         expression = expression + '6'
-        print(expression)
         self.update()
 
     def add7(self) -> None:
         """"When button '7' is clicked, concatenate 7 to expression."""
         global expression
         expression = expression + '7'
-        print(expression)
         self.update()
 
     def add8(self) -> None:
         """"When button '8' is clicked, concatenate 8 to expression."""
         global expression
         expression = expression + '8'
-        print(expression)
         self.update()
 
     def add9(self) -> None:
         """"When button '9' is clicked, concatenate 9 to expression."""
         global expression
         expression = expression + '9'
-        print(expression)
         self.update()
 
     def add_multiply(self) -> None:
         """"When button '*' is clicked, concatenate * to expression."""
         global expression
         expression = expression + '*'
-        print(expression)
         self.update()
 
     def add_divide(self) -> None:
         """"When button '1/' is clicked, concatenate / to expression."""
         global expression
         expression = expression + '/'
-        print(expression)
         self.update()
 
     def add_minus(self) -> None:
         """"When button '-' is clicked, concatenate - to expression."""
         global expression
         expression = expression + '-'
-        print(expression)
         self.update()
 
     def add_plus(self) -> None:
         """"When button '+' is clicked, concatenate + to expression."""
         global expression
         expression = expression + '+'
-        print(expression)
         self.update()
 
     def add_dot(self) -> None:
         """"When button '.' is clicked, concatenate . to expression."""
         global expression
         expression = expression + '.'
-        print(expression)
         self.update()
 
     def add_modulo(self) -> None:
         """"When button '%' is clicked, concatenate % to expression."""
         global expression
         expression = expression + '%'
-        print(expression)
         self.update()
 
     def add_power(self) -> None:
         """"When button '^' is clicked, concatenate ** to expression."""
         global expression
         expression = expression + '**'
-        print(expression)
         self.update()
 
     def change_sign(self) -> None:
         """"When button '+/-' is clicked, concatenate -( to expression."""
         global expression
         expression = expression + '-('
-        print(expression)
         self.update()
 
     def left_bracket(self) -> None:
         """"When button '(' is clicked, concatenate ( to expression."""
         global expression
         expression = expression + '('
-        print(expression)
         self.update()
 
     def right_bracket(self) -> None:
         """"When button ')' is clicked, concatenate ) to expression."""
         global expression
         expression = expression + ')'
-        print(expression)
         self.update()
 
     def add_sqrt(self) -> None:
         """"When button 'sqrt' is clicked, concatenate **0.5 to expression."""
         global expression
         expression = expression + '**0.5'
-        print(expression)
         self.update()
 
     def equals(self) -> None:
@@ -294,12 +283,10 @@ class GUI(QtWidgets.QMainWindow):
         global expression, result
         expression = ''
         result = ''
-        print(expression,'cleared')
         self.update()
 
     def undo(self) -> None:
         global expression
         expression = expression[:-1]
-        print(expression)
         self.update()
 

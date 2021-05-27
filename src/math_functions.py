@@ -13,6 +13,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def evaluate(expression: str, result: str) -> Any:
     """Evaluate mathematical expression provided by user.
     >>> evaluate('2*3')
@@ -20,18 +21,16 @@ def evaluate(expression: str, result: str) -> Any:
     >>> evaluate('3/3')
     1.0
     >>>evaluate('1/0')
-    "invalid input"
+    "Invalid input"
     """
     try:
-        print(expression, '=', eval(expression))
         return eval(expression)
-    except:
+    except Exception:
         result = 'Invalid Input'
-        print(result)
         return result
 
 
-def plot(formula: str, x1: int, x2: int):
+def plot(formula: str, x1: float, x2: float) -> Any:
     """Plot a graph using user input function.
     """
     # for now, the function only works if the input is in python: it will not plot 'sin(x)' or 'e^x'.
@@ -43,10 +42,10 @@ def plot(formula: str, x1: int, x2: int):
             plt.plot(x, y)
             plt.title(f"graph of y={formula}")
             plt.show()
-            print("plot is called")
             i = False
-        except:
+            return 'Graph plotted!'
+        except Exception:
+            i = False
             return 'Cannot plot function. Invalid input. Please try again.'
             # now we need the user to input function once again
-            i = False
 
