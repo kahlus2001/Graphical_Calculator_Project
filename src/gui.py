@@ -6,13 +6,12 @@ Copyright (c) 2021 - Eindhoven University of Technology, The Netherlands
 
 This software is made available under the terms of the MIT License.
 """
-from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSignal
+from PyQt5 import QtWidgets
+
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QLineEdit, QLabel
+from PyQt5.QtWidgets import QLineEdit
 from math_functions import *
 from PyQt5 import QtCore
-import random
 
 # define globals
 expression = ""
@@ -27,44 +26,47 @@ class GraphInputWindow(QtWidgets.QWidget):
     """
 
     def __init__(self):
-        """Initializer of the GraphWindow class.
-        """
+        """Initializer of the GraphWindow class."""
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
+
         self.status_label = QtWidgets.QLabel("Graph status", self)
         layout.addWidget(self.status_label)
         self.status_label.setGeometry(10, 20, 390, 40)
         self.status_label.setFont(QFont('Arial', 10))
-        self.status_label.setStyleSheet("QLabel { background-color : white; color : black; }")
+        self.status_label.setStyleSheet("QLabel { background-color : black; color : white; }")
 
         self.input_label = QtWidgets.QLabel("y = ", self)
         layout.addWidget(self.input_label)
         self.input_label.setGeometry(10, 70, 50, 40)
-
         self.input_function = QLineEdit("Input function, use numpy notation", self)
         layout.addWidget(self.input_function)
         self.input_lower = QLineEdit("Input lower x-bound", self)
         layout.addWidget(self.input_lower)
         self.input_upper = QLineEdit("Input upper x-bound", self)
         layout.addWidget(self.input_upper)
+
+        # input geometry
         self.input_function.setGeometry(40, 70, 220, 40)
         self.input_lower.setGeometry(10, 110, 125, 40)
         self.input_upper.setGeometry(135, 110, 125, 40)
 
+        # input confirm button
         confirm_button = QtWidgets.QPushButton('Confirm', self)
         layout.addWidget(confirm_button)
-        confirm_button.clicked.connect(self.drawGraph)
+        confirm_button.clicked.connect(self.draw_graph)
         confirm_button.setGeometry(280, 80, 120, 60)
 
         self.setWindowTitle('Function Plotter')
 
-    def drawGraph(self) -> None:
+    def draw_graph(self) -> None:
         """Draw graph from user input."""
         try:
             message = plot(self.input_function.text(), float(self.input_lower.text()), float(self.input_upper.text()))
             self.status_label.setText(message)
         except Exception:
             self.status_label.setText('Cannot plot function. Invalid input. Please try again.')
+
 
 class QuadraticWindow(QtWidgets.QWidget):
     """
@@ -73,19 +75,59 @@ class QuadraticWindow(QtWidgets.QWidget):
     """
 
     def __init__(self):
-        """Initializer of the GraphWindow class.
-        """
+        """Initializer of the QuadraticWindow class."""
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
 
+        self.roots_label = QtWidgets.QLabel("Find roots of second degree polynomial:", self)
+        layout.addWidget(self.roots_label)
+        self.roots_label.setGeometry(5, 10, 400, 30)
+        self.roots_label.setFont(QFont('Arial', 10))
+        self.roots_label.setStyleSheet("QLabel { background-color : black; color : white; }")
+
+        self.zero = QtWidgets.QLabel("0 = ", self)
+        layout.addWidget(self.zero)
+        self.a = QLineEdit("a", self)
+        layout.addWidget(self.a)
+        self.xSquared = QtWidgets.QLabel("x^2+ ", self)
+        layout.addWidget(self.xSquared)
+        self.b = QLineEdit("b", self)
+        layout.addWidget(self.b)
+        self.x = QtWidgets.QLabel("x+ ", self)
+        layout.addWidget(self.x)
+        self.c = QLineEdit("c", self)
+        layout.addWidget(self.c)
+
+        # input geometry
+        self.zero.setGeometry(100, 50, 20, 20)
+        self.a.setGeometry(120, 50, 50, 20)
+        self.xSquared.setGeometry(175, 50, 30, 20)
+        self.b.setGeometry(210, 50, 50, 20)
+        self.x.setGeometry(265, 50, 20, 20)
+        self.c.setGeometry(285, 50, 50, 20)
+
+        # confirm button
+        solve_button = QtWidgets.QPushButton('Calculate Roots', self)
+        layout.addWidget(solve_button)
+        solve_button.clicked.connect(self.solve)
+        solve_button.setGeometry(160, 80, 90, 25)
+
+        self.setWindowTitle('Find Quadratic Zeroes')
+
+    def solve(self) -> None:
+        """Call find_roots function."""
+        try:
+            roots = find_roots(float(self.a.text()), float(self.b.text()), float(self.c.text()))
+            self.roots_label.setText(roots)
+        except Exception:
+            self.roots_label.setText(' Invalid input. Cannot calculate roots. Try again.')
+
 
 class GUI(QtWidgets.QMainWindow):
-    """A class where we make our Graphical User Interface based on PyQt
-    """
+    """A class where we make our Graphical User Interface based on PyQt."""
 
     def __init__(self) -> None:
-        """Initializer of the GUI class
-        """
+        """Initializer of the GUI class"""
         super().__init__()
         main = QtWidgets.QWidget()
         layout = QtWidgets.QGridLayout()
@@ -99,7 +141,7 @@ class GUI(QtWidgets.QMainWindow):
                  '1', '2', '3', '^', 'sqrt',
                  '0', '.', '-', '+', '=']
 
-        positions = [(i, j) for i in range(2,7) for j in range(5)]
+        positions = [(i, j) for i in range(2, 7) for j in range(5)]
 
         button = []
         count = 0
@@ -143,20 +185,20 @@ class GUI(QtWidgets.QMainWindow):
         global expression, result, check
         self.previous.setText(expression)
         self.display.setText(result)
-        if check == True:
+        if check:
             expression = result
             check = False
         if result == "Invalid Input":
             result, expression = '', ''
 
     def graph(self) -> None:
+        """Initialize graph window."""
         self.graph = GraphInputWindow()
         self.graph.show()
 
     def solve_quad(self) -> None:
         self.solve_quad = QuadraticWindow()
         self.solve_quad.show()
-        find_roots(1,4,2)
 
     def add0(self) -> None:
         """"When button '0' is clicked, concatenate 0 to expression."""
@@ -260,12 +302,6 @@ class GUI(QtWidgets.QMainWindow):
         expression = expression + '**'
         self.update()
 
-    # def change_sign(self) -> None:
-    #     """"When button '+/-' is clicked, concatenate -( to expression."""
-    #     global expression
-    #     expression = expression + '-('
-    #     self.update()
-
     def left_bracket(self) -> None:
         """"When button '(' is clicked, concatenate ( to expression."""
         global expression
@@ -304,4 +340,3 @@ class GUI(QtWidgets.QMainWindow):
         global expression
         expression = expression[:-1]
         self.update()
-

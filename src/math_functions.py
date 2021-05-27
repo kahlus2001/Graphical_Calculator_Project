@@ -49,7 +49,7 @@ def plot(formula: str, x1: float, x2: float) -> Any:
             return 'Cannot plot function. Invalid input. Please try again.'
             # now we need the user to input function once again
 
-def find_roots(a: float, b: float, c: float) -> list:
+def find_roots(a: float, b: float, c: float) -> str:
     """Find roots of quadratic polynomial.
 
     :examples:
@@ -60,19 +60,20 @@ def find_roots(a: float, b: float, c: float) -> list:
     >>>find_roots(2, 2, 2)
     []
     """
-    delta = b**2 - 4*a*c
+    delta = b ** 2 - 4 * a * c
     if delta > 0:
-        x1 = (- b - math.sqrt(delta)) / 2*a
-        x2 = (- b + math.sqrt(delta)) / 2*a
+        x1 = (- b - math.sqrt(delta)) / 2 * a
+        x2 = (- b + math.sqrt(delta)) / 2 * a
         roots = [x1, x2]
-        print(roots)
-        return roots
+        return str(f"roots: x={roots[0]} and x={roots[1]}")
+
     if delta == 0:
-        x = -b / 2*a
+        x = - b / 2 * a
         roots = [x]
-        print(roots)
-        return roots
+        return str(f"double root: x={roots[0]}")
     else:
-        roots = []
-        print("no real roots")
-        return roots
+        return "no real roots"
+
+
+
+
