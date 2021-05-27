@@ -7,13 +7,11 @@ Copyright (c) 2021 - Eindhoven University of Technology, The Netherlands
 This software is made available under the terms of the MIT License.
 """
 from PyQt5 import QtGui, QtWidgets
+from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QLineEdit
-
+from PyQt5.QtWidgets import QLineEdit, QLabel
 from math_functions import *
-
 from PyQt5 import QtCore
-
 import random
 
 # define globals
@@ -55,18 +53,30 @@ class GraphInputWindow(QtWidgets.QWidget):
 
         confirm_button = QtWidgets.QPushButton('Confirm', self)
         layout.addWidget(confirm_button)
-        confirm_button.clicked.connect(self.draw_graph)
+        confirm_button.clicked.connect(self.drawGraph)
         confirm_button.setGeometry(280, 80, 120, 60)
 
         self.setWindowTitle('Function Plotter')
 
-    def draw_graph(self) -> None:
+    def drawGraph(self) -> None:
         """Draw graph from user input."""
         try:
             message = plot(self.input_function.text(), float(self.input_lower.text()), float(self.input_upper.text()))
             self.status_label.setText(message)
         except Exception:
             self.status_label.setText('Cannot plot function. Invalid input. Please try again.')
+
+class QuadraticWindow(QtWidgets.QWidget):
+    """
+    This "window" is a QWidget. If it has no parent, it
+    will appear as a free-floating window as we want.
+    """
+
+    def __init__(self):
+        """Initializer of the GraphWindow class.
+        """
+        super().__init__()
+        layout = QtWidgets.QVBoxLayout()
 
 
 class GUI(QtWidgets.QMainWindow):
@@ -84,10 +94,10 @@ class GUI(QtWidgets.QMainWindow):
 
         # create buttons
         names = ['C', 'AC', '(', ')', 'graph',
-                 '7', '8', '9', '/', 'sqrt',
+                 '7', '8', '9', '/', 'solve_quad',
                  '4', '5', '6', '*', 'mod',
-                 '1', '2', '3', '-', '^',
-                 '0', '.', '+/-', '+', '=']
+                 '1', '2', '3', '^', 'sqrt',
+                 '0', '.', '-', '+', '=']
 
         positions = [(i, j) for i in range(2,7) for j in range(5)]
 
@@ -104,9 +114,9 @@ class GUI(QtWidgets.QMainWindow):
 
         # assign buttons
         functions = [self.undo, self.clear_all, self.left_bracket, self.right_bracket, self.graph, self.add7, self.add8,
-                     self.add9, self.add_divide, self.add_sqrt, self.add4, self.add5, self.add6, self.add_multiply,
-                     self.add_modulo, self.add1, self.add2, self.add3, self.add_minus, self.add_power, self.add0,
-                     self.add_dot, self.change_sign, self.add_plus, self.equals]
+                     self.add9, self.add_divide, self.solve_quad, self.add4, self.add5, self.add6, self.add_multiply,
+                     self.add_modulo, self.add1, self.add2, self.add3, self.add_power, self.add_sqrt, self.add0,
+                     self.add_dot, self.add_minus, self.add_plus, self.equals]
 
         for index, function in enumerate(functions):
             button[index].clicked.connect(function)
@@ -142,6 +152,11 @@ class GUI(QtWidgets.QMainWindow):
     def graph(self) -> None:
         self.graph = GraphInputWindow()
         self.graph.show()
+
+    def solve_quad(self) -> None:
+        self.solve_quad = QuadraticWindow()
+        self.solve_quad.show()
+        find_roots(1,4,2)
 
     def add0(self) -> None:
         """"When button '0' is clicked, concatenate 0 to expression."""
@@ -245,11 +260,11 @@ class GUI(QtWidgets.QMainWindow):
         expression = expression + '**'
         self.update()
 
-    def change_sign(self) -> None:
-        """"When button '+/-' is clicked, concatenate -( to expression."""
-        global expression
-        expression = expression + '-('
-        self.update()
+    # def change_sign(self) -> None:
+    #     """"When button '+/-' is clicked, concatenate -( to expression."""
+    #     global expression
+    #     expression = expression + '-('
+    #     self.update()
 
     def left_bracket(self) -> None:
         """"When button '(' is clicked, concatenate ( to expression."""
