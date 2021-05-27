@@ -33,24 +33,26 @@ class GraphInputWindow(QtWidgets.QWidget):
         """
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
-        self.label = QtWidgets.QLabel("Centre Window")
-        self.label.setPixmap(QtGui.QPixmap(600, 600))
-        layout.addWidget(self.label)
+        self.input_label = QtWidgets.QLabel("y = ", self)
+        layout.addWidget(self.input_label)
+        self.input_label.setGeometry(10, 20, 50, 40)
 
-        self.input_function = QLineEdit("Input function", self)
+        self.input_function = QLineEdit("Input function, use numpy notation", self)
         layout.addWidget(self.input_function)
-        self.input_lower = QLineEdit("Input lower bound", self)
+        self.input_lower = QLineEdit("Input lower x-bound", self)
         layout.addWidget(self.input_lower)
-        self.input_upper = QLineEdit("Input upper bound", self)
+        self.input_upper = QLineEdit("Input upper x-bound", self)
         layout.addWidget(self.input_upper)
-        self.input_function.setGeometry(0, 80, 250, 40)
-        self.input_lower.setGeometry(0, 120, 125, 40)
-        self.input_upper.setGeometry(125, 120, 125, 40)
+        self.input_function.setGeometry(40, 20, 220, 40)
+        self.input_lower.setGeometry(10, 60, 125, 40)
+        self.input_upper.setGeometry(135, 60, 125, 40)
 
         confirm_button = QtWidgets.QPushButton('Confirm', self)
         layout.addWidget(confirm_button)
         confirm_button.clicked.connect(self.draw_graph)
-        confirm_button.setGeometry(65, 200, 120, 60)
+        confirm_button.setGeometry(280, 30, 120, 60)
+
+        self.setWindowTitle('Function Plotter')
 
     def draw_graph(self) -> None:
         """Draw graph from user input."""

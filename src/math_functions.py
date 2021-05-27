@@ -33,13 +33,12 @@ def evaluate(expression: str, result: str) -> Any:
 
 def plot(formula: str, x1: int, x2: int):
     """Plot a graph using user input function.
-
     """
     # for now, the function only works if the input is in python: it will not plot 'sin(x)' or 'e^x'.
     i = True
     while i:
         try:
-            x = np.arange(x1, x2+1, 0.2)
+            x = np.arange(x1, x2+0.1, 0.1)
             y = eval(formula)
             plt.plot(x, y)
             plt.title(f"graph of y={formula}")
