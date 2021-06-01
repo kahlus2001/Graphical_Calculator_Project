@@ -2,3 +2,5 @@ pytest
 sphinx
 sphinx-rtd-theme
 PyQt5
+numpy
+matplotlib
