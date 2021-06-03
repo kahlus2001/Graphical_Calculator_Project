@@ -16,3 +16,7 @@ This software is made available under the terms of the MIT License.
 # Graphical calculator
 
 Capable of simple mathematical operations. Can also plot functions provided by the user. All in a user-friendly GUI.
+
+Link to screencast explaining the functionality of our graphical calculator:
+https://drive.google.com/file/d/1zaDSerzWBvFGsulCBdxma72ikqvFOlU_/view?usp=sharing
+

@@ -202,6 +202,8 @@ class GUI(QtWidgets.QMainWindow):
         self.graph.show()
 
     def solve_quad(self) -> None:
+        """Initialize quadratic solver window.
+        """
         self.solve_quad = QuadraticWindow()
         self.solve_quad.show()
 
