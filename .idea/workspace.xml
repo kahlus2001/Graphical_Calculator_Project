@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="updated sphinx documentation, doctests, added comments, edited requirements.txt, updated find_roots()">
+    <list default="true" id="3439ab5a-51b6-4d07-9b6b-478652f6c27f" name="Default Changelist" comment="graph plotter fully upgraded. deleted print statements">
+      <change afterPath="$PROJECT_DIR$/tests/pytest_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/.buildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/.doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/.doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/.doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/.doctrees/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/_static/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/_static/basic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/_static/searchtools.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/_static/searchtools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/genindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pytest.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,19 +25,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/pytest_tests.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/build" />
+    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.run pytest test cases in tests">
-    <configuration name="run main app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python docs.generate HTML docs with sphinx">
+    <configuration name="run main app" type="PythonConfigurationType" factoryName="Python">
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\20183240\Documents\3th year\Q4\2IS50 Software Development for Engineers\Homework 0\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -58,18 +53,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate HTML docs with sphinx " type="docs" factoryName="Sphinx task">
+    <configuration name="generate HTML docs with sphinx" type="docs" factoryName="Sphinx task">
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\20183240\Documents\3th year\Q4\2IS50 Software Development for Engineers\Homework 0\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="docutils_input_file" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\docs\source" />
-      <option name="docutils_output_file" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\docs\build" />
+      <option name="docutils_input_file" value="C:\Users\20183240\Documents\3th year\Q4\2IS50 Software Development for Engineers\20183240-20200873-ha-2\docs\source" />
+      <option name="docutils_output_file" value="C:\Users\20183240\Documents\3th year\Q4\2IS50 Software Development for Engineers\20183240-20200873-ha-2\docs\build" />
       <option name="docutils_params" value="" />
       <option name="docutils_task" value="html" />
       <option name="docutils_open_in_browser" value="false" />
@@ -79,7 +74,7 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\20183240\Documents\3th year\Q4\2IS50 Software Development for Engineers\Homework 0\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -98,9 +93,9 @@
       <module name="20183240-20200873-ha-2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\20200873\Desktop\2IS50\20183240-20200873-ha-2\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -113,15 +108,10 @@
     </configuration>
     <list>
       <item itemvalue="Python.run main app" />
-      <item itemvalue="Python docs.generate HTML docs with sphinx " />
+      <item itemvalue="Python docs.generate HTML docs with sphinx" />
       <item itemvalue="Python tests.run doctest examples in src" />
       <item itemvalue="Python tests.run pytest test cases in tests" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.run main app" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,11 +125,11 @@
       <workItem from="1621341298515" duration="6581000" />
       <workItem from="1621449860450" duration="4322000" />
       <workItem from="1621500234307" duration="1014000" />
-      <workItem from="1621510211350" duration="81000" />
-      <workItem from="1621853495913" duration="860000" />
-      <workItem from="1621950116196" duration="5845000" />
-      <workItem from="1622113642566" duration="9567000" />
-      <workItem from="1622554951141" duration="2833000" />
+      <workItem from="1621949817305" duration="2733000" />
+      <workItem from="1621957707289" duration="351000" />
+      <workItem from="1622102411658" duration="8434000" />
+      <workItem from="1622445377627" duration="213000" />
+      <workItem from="1622706303579" duration="5617000" />
     </task>
     <task id="LOCAL-00001" summary="completed configuration">
       <created>1621346690521</created>
@@ -204,42 +194,35 @@
       <option name="project" value="LOCAL" />
       <updated>1621454061802</updated>
     </task>
-    <task id="LOCAL-00010" summary="added display labels. added graph window. added sqrt function. fixed invalid input problem.">
-      <created>1621955552471</created>
+    <task id="LOCAL-00010" summary="basic operations finished">
+      <created>1621507564024</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1621955552471</updated>
+      <updated>1621507564024</updated>
     </task>
-    <task id="LOCAL-00011" summary="changed button possitions. Added find_roots function. Added quadratic solver window.">
-      <created>1622141054726</created>
+    <task id="LOCAL-00011" summary="basic graph plotter finished. updated buttons">
+      <created>1622106394814</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1622141054726</updated>
+      <updated>1622106394814</updated>
     </task>
-    <task id="LOCAL-00012" summary="polynomial root finder fully operational.">
-      <created>1622144636409</created>
+    <task id="LOCAL-00012" summary="graph plotter upgraded.">
+      <created>1622108924459</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1622144636409</updated>
+      <updated>1622108924459</updated>
     </task>
-    <task id="LOCAL-00013" summary="changed a few return messages.">
-      <created>1622144964007</created>
+    <task id="LOCAL-00013" summary="graph plotter fully upgraded. deleted print statements">
+      <created>1622110783429</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1622144964007</updated>
+      <updated>1622110783429</updated>
     </task>
-    <task id="LOCAL-00014" summary="updated docstrings in math.functions.py">
-      <created>1622145247436</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1622145247436</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,17 +253,17 @@
     <MESSAGE value="generated documentation." />
     <MESSAGE value="added functions: add, subtract, multiply, divide, modulo to math.py" />
     <MESSAGE value="added plot function" />
-    <MESSAGE value="added display labels. added graph window. added sqrt function. fixed invalid input problem." />
-    <MESSAGE value="changed button possitions. Added find_roots function. Added quadratic solver window." />
-    <MESSAGE value="polynomial root finder fully operational." />
-    <MESSAGE value="changed a few return messages." />
-    <MESSAGE value="updated docstrings in math.functions.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docstrings in math.functions.py" />
+    <MESSAGE value="basic operations finished" />
+    <MESSAGE value="basic graph plotter finished. updated buttons" />
+    <MESSAGE value="graph plotter upgraded." />
+    <MESSAGE value="graph plotter fully upgraded. deleted print statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="graph plotter fully upgraded. deleted print statements" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1622717723452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_doctest_examples_in_src.coverage" NAME="run doctest examples in src Coverage Results" MODIFIED="1622717738231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1622717742641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1622717656808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx.coverage" NAME="generate HTML docs with sphinx Coverage Results" MODIFIED="1622712388913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_doctest_examples_in_src.coverage" NAME="run doctest examples in src Coverage Results" MODIFIED="1622710141150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_main_app.coverage" NAME="run main app Coverage Results" MODIFIED="1622711356923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$generate_HTML_docs_with_sphinx_.coverage" NAME="generate HTML docs with sphinx  Coverage Results" MODIFIED="1621350177846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/20183240_20200873_ha_2$run_pytest_test_cases_in_tests.coverage" NAME="run pytest test cases in tests Coverage Results" MODIFIED="1622710871122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
