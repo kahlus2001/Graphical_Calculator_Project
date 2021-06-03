@@ -13,11 +13,6 @@ from PyQt5.QtWidgets import QLineEdit
 from math_functions import *
 from PyQt5 import QtCore
 
-# define global variables
-expression = ""
-result = ""
-check = False
-
 
 class GraphInputWindow(QtWidgets.QWidget):
     """
@@ -158,13 +153,21 @@ class GUI(QtWidgets.QMainWindow):
             count += 1
 
         # assign methods to buttons
-        functions = [self.undo, self.clear_all, self.left_bracket, self.right_bracket, self.graph, self.add7, self.add8,
-                     self.add9, self.add_divide, self.solve_quad, self.add4, self.add5, self.add6, self.add_multiply,
-                     self.add_modulo, self.add1, self.add2, self.add3, self.add_power, self.add_sqrt, self.add0,
-                     self.add_dot, self.add_minus, self.add_plus, self.equals]
+        functions = [self.undo, self.clear_all, lambda: self.add('('), lambda: self.add(')'), self.graph,
+                     lambda: self.add('7'), lambda: self.add('8'),
+                     lambda: self.add('9'), lambda: self.add('/'), self.solve_quad, lambda: self.add('4'),
+                     lambda: self.add('5'), lambda: self.add('6'), lambda: self.add('*'),
+                     lambda: self.add('%'), lambda: self.add('1'), lambda: self.add('2'),
+                     lambda: self.add('3'), lambda: self.add('**'), lambda: self.add('**0.5'), lambda: self.add('0'),
+                     lambda: self.add('.'), lambda: self.add('-'), lambda: self.add('+'), self.equals]
 
         for index, function in enumerate(functions):
             button[index].clicked.connect(function)
+
+        # stored values:
+        self.expression = ''
+        self.result = ''
+        self.check = False
 
         # create displays as label
         self.previous = QtWidgets.QLabel('', self)
@@ -186,14 +189,15 @@ class GUI(QtWidgets.QMainWindow):
     def update(self) -> None:
         """Update display of calculator.
         """
-        global expression, result, check
-        self.previous.setText(expression)
-        self.display.setText(result)
-        if check:
-            expression = result
-            check = False
-        if result == "Invalid Input":
-            result, expression = '', ''
+
+        self.previous.setText(self.expression)
+        self.display.setText(self.result)
+        if self.check:
+            self.expression = self.result
+            self.check = False
+        if self.result == "Invalid Input":
+            self.result, self.expression = '', ''
+
 
     def graph(self) -> None:
         """Initialize graph window.
@@ -207,170 +211,33 @@ class GUI(QtWidgets.QMainWindow):
         self.solve_quad = QuadraticWindow()
         self.solve_quad.show()
 
-    def add0(self) -> None:
-        """When button '0' is clicked, concatenate 0 to expression.
+    def add(self, x: str) -> None:
+        """Concatenate symbol on button to expression.
         """
-        global expression
-        expression = expression + '0'
-        self.update()
-
-    def add1(self) -> None:
-        """When button '1' is clicked, concatenate 1 to expression.
-        """
-        global expression
-        expression = expression + '1'
-        self.update()
-
-    def add2(self) -> None:
-        """When button '2' is clicked, concatenate 2 to expression.
-        """
-        global expression
-        expression = expression + '2'
-        self.update()
-
-    def add3(self) -> None:
-        """When button '3' is clicked, concatenate 3 to expression.
-        """
-        global expression
-        expression = expression + '3'
-        self.update()
-
-    def add4(self) -> None:
-        """When button '4' is clicked, concatenate 4 to expression.
-        """
-        global expression
-        expression = expression + '4'
-        self.update()
-
-    def add5(self) -> None:
-        """When button '5' is clicked, concatenate 5 to expression.
-        """
-        global expression
-        expression = expression + '5'
-        self.update()
-
-    def add6(self) -> None:
-        """When button '6' is clicked, concatenate 6 to expression.
-        """
-        global expression
-        expression = expression + '6'
-        self.update()
-
-    def add7(self) -> None:
-        """When button '7' is clicked, concatenate 7 to expression.
-        """
-        global expression
-        expression = expression + '7'
-        self.update()
-
-    def add8(self) -> None:
-        """When button '8' is clicked, concatenate 8 to expression.
-        """
-        global expression
-        expression = expression + '8'
-        self.update()
-
-    def add9(self) -> None:
-        """When button '9' is clicked, concatenate 9 to expression.
-        """
-        global expression
-        expression = expression + '9'
-        self.update()
-
-    def add_multiply(self) -> None:
-        """When button '*' is clicked, concatenate * to expression.
-        """
-        global expression
-        expression = expression + '*'
-        self.update()
-
-    def add_divide(self) -> None:
-        """When button '1/' is clicked, concatenate / to expression.
-        """
-        global expression
-        expression = expression + '/'
-        self.update()
-
-    def add_minus(self) -> None:
-        """When button '-' is clicked, concatenate - to expression.
-        """
-        global expression
-        expression = expression + '-'
-        self.update()
-
-    def add_plus(self) -> None:
-        """When button '+' is clicked, concatenate + to expression.
-        """
-        global expression
-        expression = expression + '+'
-        self.update()
-
-    def add_dot(self) -> None:
-        """When button '.' is clicked, concatenate . to expression.
-        """
-        global expression
-        expression = expression + '.'
-        self.update()
-
-    def add_modulo(self) -> None:
-        """When button '%' is clicked, concatenate % to expression.
-        """
-        global expression
-        expression = expression + '%'
-        self.update()
-
-    def add_power(self) -> None:
-        """When button '^' is clicked, concatenate ** to expression.
-        """
-        global expression
-        expression = expression + '**'
-        self.update()
-
-    def left_bracket(self) -> None:
-        """When button '(' is clicked, concatenate ( to expression.
-        """
-        global expression
-        expression = expression + '('
-        self.update()
-
-    def right_bracket(self) -> None:
-        """When button ')' is clicked, concatenate ) to expression.
-        """
-        global expression
-        expression = expression + ')'
-        self.update()
-
-    def add_sqrt(self) -> None:
-        """When button 'sqrt' is clicked, concatenate **0.5 to expression.
-        """
-        global expression
-        expression = expression + '**0.5'
+        self.expression = self.expression + x
         self.update()
 
     def equals(self) -> None:
         """Call evaluate() to numerically solve expression.
         """
-        global expression, result, check
-        new_expression = evaluate(expression, result)
+        new_expression = evaluate(self.expression, self.result)
         # safety if else statement.
         if new_expression == 'invalid input':
-            expression = ''
+            self.expression = ''
         else:
-            result = str(new_expression)
-            check = True
+            self.result = str(new_expression)
+            self.check = True
             self.update()
 
     def clear_all(self) -> None:
         """Clear expression input.
         """
-        global expression, result
-        expression = ''
-        result = ''
+        self.expression = ''
+        self.result = ''
         self.update()
 
     def undo(self) -> None:
         """Remove last character from expression.
         """
-        global expression
-        expression = expression[:-1]
+        self.expression = self.expression[:-1]
         self.update()
